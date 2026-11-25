@@ -1,28 +1,25 @@
-This is a Kotlin Multiplatform project targeting Desktop (JVM).
+# My Compose Desktop
 
-* [/shared](./shared/src) is for code that will be shared across your Compose Multiplatform applications.
-  It contains several subfolders:
-  - [commonMain](./shared/src/commonMain/kotlin) is for code that’s common for all targets.
-  - Other folders are for Kotlin code that will be compiled for only the platform indicated in the folder name.
-    For example, if you want to use Apple’s CoreCrypto for the iOS part of your Kotlin app,
-    the [iosMain](./shared/src/iosMain/kotlin) folder would be the right place for such calls.
-    Similarly, if you want to edit the Desktop (JVM) specific part, the [jvmMain](./shared/src/jvmMain/kotlin)
-    folder is the appropriate location.
+A personal playground repository created to explore and learn **Compose Multiplatform (CMP)** and **Kotlin Multiplatform (KMP)**, focusing on building desktop applications.
 
-### Running the apps
+The goal of this project is to understand how shared Kotlin codebases work alongside desktop-specific UI implementations, state handling, and application lifecycles using Jetpack Compose principles on the JVM.
 
-Use the run configurations provided by the run widget in your IDE's toolbar. You can also use these commands and options:
+## What I'm Exploring Here
 
-- Desktop app:
-  - Hot reload: `./gradlew :desktopApp:hotRun --auto`
-  - Standard run: `./gradlew :desktopApp:run`
+- Setting up project structure with shared code (`commonMain`) and target-specific modules (`desktopApp`).
+- Compose UI patterns for desktop windows, layouts, and desktop navigation.
+- State management and resource sharing across modules.
+- Gradle configurations for Kotlin Multiplatform and desktop packaging.
 
-### Running tests
+## Tech Stack
 
-Use the run button in your IDE's editor gutter, or run tests using Gradle tasks:
+- **Language:** Kotlin
+- **Framework:** Compose Multiplatform (Desktop / JVM)
+- **Build System:** Gradle (Kotlin DSL)
 
-- Desktop tests: `./gradlew :shared:jvmTest`
+## Getting Started
 
----
+To run the desktop application locally, make sure you have a compatible JDK installed (JDK 17 or higher recommended), clone the repository, and execute:
 
-Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html)…
+```bash
+./gradlew :desktopApp:run
